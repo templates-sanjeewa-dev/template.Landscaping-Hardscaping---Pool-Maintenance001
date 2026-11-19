@@ -116,6 +116,12 @@ export function SiteHeader() {
         role="dialog"
       >
         <div className={styles.mobileMenuInner}>
+          <div className={styles.mobileMenuTop}>
+            <span>{site.brand.name}</span>
+            <button className={styles.mobileClose} onClick={closeMenu} type="button">
+              Close <span aria-hidden="true">×</span>
+            </button>
+          </div>
           <p>Outdoor spaces designed, built, and cared for with one consistent standard.</p>
           <nav aria-label="Mobile navigation">
             {navigation.map((item, index) => (

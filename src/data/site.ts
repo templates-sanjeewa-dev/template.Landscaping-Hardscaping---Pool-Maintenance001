@@ -4,7 +4,7 @@ export const site = {
     descriptor: "Outdoor Environments",
   },
   phone: "(512) 555-0184",
-  email: "hello@verdantandstone.com",
+  email: "hello@verdantandstone.example",
   location: "Austin, Texas & surrounding communities",
 };
 
@@ -82,17 +82,17 @@ export const testimonials = [
   {
     quote: "The whole project felt considered from the first walkthrough to the final planting. The new patio and landscape finally feel like part of the house.",
     name: "Maya R.",
-    detail: "Residential landscape client",
+    detail: "Sample residential landscape client",
   },
   {
     quote: "Clear communication, excellent workmanship, and a crew that cared about the details. We use them for the pool now too.",
     name: "Daniel K.",
-    detail: "Outdoor living + pool care client",
+    detail: "Sample outdoor living + pool care client",
   },
   {
     quote: "They solved the drainage and layout problems without making the yard feel overdesigned. It looks established, calm, and easy to live in.",
     name: "Elena P.",
-    detail: "Landscape renovation client",
+    detail: "Sample landscape renovation client",
   },
 ];
 

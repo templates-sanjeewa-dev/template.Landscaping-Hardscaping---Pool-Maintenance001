@@ -2359,3 +2359,159 @@
     object-position: center;
   }
 }
+
+
+/* Finalization Chat 3 — semantic, accessibility, and small-screen acceptance polish. */
+.skipLink {
+  position: fixed;
+  z-index: 200;
+  top: 12px;
+  left: 12px;
+  padding: .7rem 1rem;
+  color: var(--paper-bright);
+  background: var(--forest);
+  border-radius: 2px;
+  font-size: .78rem;
+  font-weight: 650;
+  transform: translateY(-160%);
+  transition: transform 160ms ease;
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
+.headerScrolled {
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.mobileMenuTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.86);
+  font-size: .72rem;
+  font-weight: 650;
+}
+
+.mobileClose {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .5rem 0;
+  border: 0;
+  color: rgba(255,255,255,.76);
+  background: transparent;
+  cursor: pointer;
+  font-size: .72rem;
+}
+
+.mobileClose:hover,
+.mobileClose:focus-visible {
+  color: var(--white);
+}
+
+.projectImage {
+  cursor: default;
+}
+
+.sampleNotice {
+  max-width: 38rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 1180px) {
+  .mobileMenuInner > p {
+    margin-top: clamp(2rem, 5vh, 3rem);
+  }
+}
+
+@media (max-width: 380px) {
+  .headerInner,
+  .heroContent,
+  .trustStrip,
+  .services,
+  .projects,
+  .why,
+  .process,
+  .testimonials,
+  .areas {
+    width: calc(100% - 24px);
+  }
+
+  .heroGrid {
+    width: calc(100% - 24px);
+  }
+
+  .hero {
+    min-height: 720px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.85rem, 14vw, 3.35rem);
+  }
+
+  .heroLead {
+    font-size: .94rem;
+  }
+
+  .trustStrip {
+    grid-template-columns: 1fr;
+  }
+
+  .trustStrip > div,
+  .trustStrip > div:first-child {
+    min-height: 108px;
+    border-left: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .trustStrip > div:last-child {
+    border-bottom: 0;
+  }
+
+  .mobileMenuInner {
+    width: calc(100% - 24px);
+    padding-top: 96px;
+  }
+
+  .mobileMenu nav {
+    margin-block: 2rem;
+  }
+
+  .mobileMenu nav a {
+    grid-template-columns: 38px 1fr auto;
+    font-size: 1.45rem;
+  }
+
+  .featureContent,
+  .aboutCopy {
+    padding-inline: 20px;
+  }
+
+  .projectMeta h3 {
+    font-size: 1.45rem;
+  }
+
+  .footer {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .footerDirectory {
+    grid-template-columns: 1fr;
+  }
+
+  .footerDirectory > div:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skipLink {
+    transition: none;
+  }
+}

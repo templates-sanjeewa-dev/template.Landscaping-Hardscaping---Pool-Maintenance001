@@ -6,7 +6,7 @@ export function SiteFooter() {
     <footer className={styles.footer}>
       <div className={styles.footerTop}>
         <div className={styles.footerBrand}>
-          <a className={styles.footerLogo} href="#top">
+          <a aria-label={`${site.brand.name} home`} className={styles.footerLogo} href="#top">
             <span className={styles.footerMark} aria-hidden="true"><i /><i /></span>
             <span>
               <strong>{site.brand.name}</strong>
@@ -41,14 +41,14 @@ export function SiteFooter() {
             <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>{site.phone}</a>
             <a href={`mailto:${site.email}`}>{site.email}</a>
             <p>{site.location}</p>
-            <p>Mon–Fri · 8:00–5:00</p>
+            <p>Sample hours · Mon–Fri · 8:00–5:00</p>
           </div>
         </div>
       </div>
 
       <div className={styles.footerBottom}>
         <span>© 2026 {site.brand.name}. Demo presentation website.</span>
-        <span>Privacy · Terms · Accessibility</span>
+        <span>Portfolio demonstration · Frontend only</span>
         <span className={styles.demoNote}>Fictional business and sample content for portfolio demonstration.</span>
       </div>
     </footer>

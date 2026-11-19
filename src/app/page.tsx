@@ -9,9 +9,11 @@ const heroImage = "https://images.unsplash.com/photo-1783125127199-860da9744dcc?
 
 export default function Home() {
   return (
-    <main id="top" className={styles.page}>
+    <div className={styles.page} id="top">
       <HomeMotion />
+      <a className={styles.skipLink} href="#main-content">Skip to content</a>
       <SiteHeader />
+      <main id="main-content">
 
       <section className={styles.hero} aria-labelledby="hero-title">
         <Image
@@ -157,7 +159,6 @@ export default function Home() {
             <article className={index === 0 ? styles.projectLarge : styles.projectCard} key={project.title}>
               <div className={styles.projectImage}>
                 <Image src={project.image} alt={project.alt} fill sizes={index === 0 ? "(max-width: 900px) 100vw, 60vw" : "(max-width: 900px) 100vw, 40vw"} />
-                <span className={styles.projectArrow} aria-hidden="true">↗</span>
               </div>
               <div className={styles.projectMeta}>
                 <div>
@@ -200,12 +201,12 @@ export default function Home() {
 
       <section className={styles.about} id="about" aria-labelledby="about-title" data-reveal>
         <div className={styles.aboutCopy}>
-          <p className={styles.kicker}>A local outdoor company</p>
+          <p className={styles.kicker}>A considered outdoor approach</p>
           <h2 id="about-title">The landscape should support the life happening around it.</h2>
           <p>
-            Verdant & Stone is a fictional demonstration brand built to show how a
-            premium outdoor-services company can present itself: calm, capable,
-            visually led, and focused on useful spaces rather than decoration alone.
+            We bring planting, hardscape, pool care, and outdoor-living details into
+            one cohesive approach—so each part of the property feels connected,
+            practical, and natural to the home around it.
           </p>
           <div className={styles.aboutPoints}>
             <span>Residential design + installation</span>
@@ -226,7 +227,7 @@ export default function Home() {
 
       <section className={styles.testimonials} aria-labelledby="testimonials-title" data-reveal>
         <div className={styles.testimonialHeader}>
-          <p className={styles.kicker}>Client perspective</p>
+          <p className={styles.kicker}>Illustrative client perspective</p>
           <h2 id="testimonials-title">The best result is a space that feels easy to own.</h2>
         </div>
         <div className={styles.testimonialGrid}>
@@ -281,7 +282,8 @@ export default function Home() {
         </div>
       </section>
 
+      </main>
       <SiteFooter />
-    </main>
+    </div>
   );
 }
