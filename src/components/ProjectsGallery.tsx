@@ -29,6 +29,7 @@ export function ProjectsGallery() {
             <button
               type="button"
               key={category}
+              aria-controls="project-gallery"
               aria-pressed={activeCategory === category}
               onClick={() => setActiveCategory(category)}
             >
@@ -41,7 +42,10 @@ export function ProjectsGallery() {
         </span>
       </div>
 
-      <div className={styles.galleryGrid}>
+      <div
+        className={`${styles.galleryGrid} ${activeCategory !== "All" ? styles.filteredGrid : ""}`}
+        id="project-gallery"
+      >
         {visibleProjects.map((project) => (
           <article
             className={`${styles.projectCard} ${styles[`layout${project.layout[0].toUpperCase()}${project.layout.slice(1)}`]}`}

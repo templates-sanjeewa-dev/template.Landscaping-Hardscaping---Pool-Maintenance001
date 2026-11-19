@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";\nimport { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { navigation, site } from "@/data/site";
 import styles from "@/app/page.module.css";
 
 export function SiteHeader({ interior = false }: { interior?: boolean }) {
-  const pathname = usePathname();\n  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);

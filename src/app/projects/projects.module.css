@@ -766,3 +766,167 @@
     transition: none !important;
   }
 }
+
+
+/* Projects final acceptance polish. */
+#portfolio,
+.estimate {
+  scroll-margin-top: 96px;
+}
+
+.heroLink span,
+.lightButton span {
+  transition: transform 180ms ease;
+}
+
+.heroLink:hover span,
+.heroLink:focus-visible span {
+  transform: translateY(3px);
+}
+
+.lightButton:hover span,
+.lightButton:focus-visible span {
+  transform: translate(3px, -3px);
+}
+
+.heroLink:hover,
+.heroLink:focus-visible {
+  color: var(--forest-2);
+}
+
+.lightButton:hover,
+.lightButton:focus-visible {
+  background: #ffffff;
+}
+
+.filters button {
+  min-height: 40px;
+}
+
+.filteredGrid .projectCard,
+.filteredGrid .layoutLarge,
+.filteredGrid .layoutMedium,
+.filteredGrid .layoutWide,
+.filteredGrid .layoutSmall {
+  grid-column: span 6;
+}
+
+.filteredGrid .projectCard:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.filteredGrid .projectMedia,
+.filteredGrid .layoutLarge .projectMedia,
+.filteredGrid .layoutWide .projectMedia,
+.filteredGrid .layoutSmall .projectMedia {
+  min-height: 440px;
+}
+
+.projectMeta h2,
+.featureCopy h2,
+.detailsIntro h2,
+.composition h2,
+.services h2 {
+  text-wrap: balance;
+}
+
+.services nav a {
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.services nav a:hover,
+.services nav a:focus-visible {
+  color: var(--forest-2);
+  background: rgba(23, 39, 29, .035);
+}
+
+@media (max-width: 900px) {
+  #portfolio,
+  .estimate {
+    scroll-margin-top: 84px;
+  }
+
+  .filteredGrid .projectCard,
+  .filteredGrid .layoutLarge,
+  .filteredGrid .layoutMedium,
+  .filteredGrid .layoutWide,
+  .filteredGrid .layoutSmall {
+    grid-column: span 6;
+  }
+
+  .filteredGrid .projectCard:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .featureCopy {
+    padding-block: 4.5rem;
+  }
+
+  .compositionGrid h3 {
+    margin-top: 2.6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #portfolio,
+  .estimate {
+    scroll-margin-top: 74px;
+  }
+
+  .filters button {
+    min-height: 40px;
+  }
+
+  .filteredGrid .projectCard,
+  .filteredGrid .layoutLarge,
+  .filteredGrid .layoutMedium,
+  .filteredGrid .layoutWide,
+  .filteredGrid .layoutSmall,
+  .filteredGrid .projectCard:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
+  .filteredGrid .projectMedia,
+  .filteredGrid .layoutLarge .projectMedia,
+  .filteredGrid .layoutWide .projectMedia,
+  .filteredGrid .layoutSmall .projectMedia {
+    min-height: 390px;
+  }
+
+  .projectMeta h2 {
+    font-size: 1.65rem;
+  }
+
+  .services nav a {
+    grid-template-columns: 38px 1fr auto;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .heroCopy > p:not(.kicker),
+  .portfolioIntro > p,
+  .featureCopy > p:not(.kicker),
+  .compositionGrid p,
+  .estimateCopy > p:not(.kicker) {
+    font-size: .92rem;
+  }
+
+  .projectMeta h2 {
+    font-size: 1.5rem;
+  }
+
+  .projectMeta p,
+  .detailStrip figcaption {
+    font-size: .64rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroLink span,
+  .lightButton span,
+  .services nav a b {
+    transform: none !important;
+    transition: none !important;
+  }
+}
