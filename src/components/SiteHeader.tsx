@@ -88,7 +88,7 @@ export function SiteHeader({ interior = false }: { interior?: boolean }) {
           ))}
         </nav>
 
-        <a className={styles.headerCta} href="#estimate">
+        <a className={styles.headerCta} href="/contact">
           Free estimate <span aria-hidden="true">↗</span>
         </a>
 
@@ -135,7 +135,7 @@ export function SiteHeader({ interior = false }: { interior?: boolean }) {
               </a>
             ))}
           </nav>
-          <a className={styles.mobileEstimate} href="#estimate" onClick={() => setOpen(false)}>
+          <a className={styles.mobileEstimate} href="/contact" onClick={() => setOpen(false)}>
             Request a free estimate <span aria-hidden="true">↗</span>
           </a>
           <div className={styles.mobileContact}>
