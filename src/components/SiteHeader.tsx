@@ -1,19 +1,54 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { navigation, site } from "@/data/site";
 import styles from "@/app/page.module.css";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const updateHeader = () => setScrolled(window.scrollY > 36);
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    return () => window.removeEventListener("scroll", updateHeader);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
+
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
+    const focusable = menuRef.current?.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled])',
+    );
+    focusable?.[0]?.focus();
+
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setOpen(false);
+        triggerRef.current?.focus();
+        return;
+      }
+
+      if (event.key !== "Tab" || !focusable?.length) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const active = document.activeElement;
+
+      if (event.shiftKey && active === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
     };
 
     document.addEventListener("keydown", onKeyDown);
@@ -23,8 +58,15 @@ export function SiteHeader() {
     };
   }, [open]);
 
+  const closeMenu = () => {
+    setOpen(false);
+    triggerRef.current?.focus();
+  };
+
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${scrolled ? styles.headerScrolled : ""} ${open ? styles.headerMenuOpen : ""}`}
+    >
       <div className={styles.headerInner}>
         <a className={styles.brand} href="#top" aria-label={`${site.brand.name} home`}>
           <span className={styles.brandMark} aria-hidden="true">
@@ -53,7 +95,8 @@ export function SiteHeader() {
           aria-expanded={open}
           aria-controls="mobile-navigation"
           aria-label={open ? "Close navigation" : "Open navigation"}
-          onClick={() => setOpen((value) => !value)}
+          onClick={() => (open ? closeMenu() : setOpen(true))}
+          ref={triggerRef}
         >
           <span>{open ? "Close" : "Menu"}</span>
           <span className={styles.menuIcon} aria-hidden="true">
@@ -67,6 +110,10 @@ export function SiteHeader() {
         className={`${styles.mobileMenu} ${open ? styles.mobileMenuOpen : ""}`}
         id="mobile-navigation"
         aria-hidden={!open}
+        aria-label="Site navigation"
+        aria-modal="true"
+        ref={menuRef}
+        role="dialog"
       >
         <div className={styles.mobileMenuInner}>
           <p>Outdoor spaces designed, built, and cared for with one consistent standard.</p>
@@ -83,7 +130,7 @@ export function SiteHeader() {
             Request a free estimate <span aria-hidden="true">↗</span>
           </a>
           <div className={styles.mobileContact}>
-            <span>{site.phone}</span>
+            <a href={`tel:${site.phone.replace(/[^+\\d]/g, "")}`}>{site.phone}</a>
             <span>{site.location}</span>
           </div>
         </div>
