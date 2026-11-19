@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 
 const detailImages = [
   {
-    src: "https://images.unsplash.com/photo-1792802144137-c65ca2f8263a?auto=format&fit=crop&w=1400&q=84",
-    alt: "Garden path leading toward a stone building framed by hedges",
-    label: "Garden structure",
+    src: "https://images.unsplash.com/photo-1761637822930-fb1c1a3df94d?auto=format&fit=crop&w=1400&q=84",
+    alt: "Modern garden pathway with stone wall, paving, and clipped hedges",
+    label: "Stone + planting",
   },
   {
     src: "https://images.unsplash.com/photo-1793087404058-9be26ac4aab0?auto=format&fit=crop&w=1400&q=84",
@@ -89,8 +89,8 @@ export default function ProjectsPage() {
         <section className={styles.feature} aria-labelledby="feature-project-title" data-reveal>
           <div className={styles.featureMain}>
             <Image
-              src="https://images.unsplash.com/photo-1755816764913-bd1104a26d78?auto=format&fit=crop&w=2000&q=86"
-              alt="Modern landscaped backyard with pergola and green lawn"
+              src="https://images.unsplash.com/photo-1758465212323-6e1201a553ac?auto=format&fit=crop&w=2000&q=86"
+              alt="Modern pergola framed by mature trees and garden planting"
               fill
               sizes="(max-width: 900px) 100vw, 58vw"
             />
@@ -113,16 +113,16 @@ export default function ProjectsPage() {
           <div className={styles.featureDetails}>
             <div>
               <Image
-                src="https://images.unsplash.com/photo-1762117360868-d4e757073d45?auto=format&fit=crop&w=1400&q=84"
-                alt="Modern outdoor kitchen with stone wall, bar, and seating"
+                src="https://images.unsplash.com/photo-1766603636774-5f328e0da870?auto=format&fit=crop&w=1400&q=84"
+                alt="Modern residential entrance with stone wall and layered garden planting"
                 fill
                 sizes="(max-width: 700px) 100vw, 50vw"
               />
             </div>
             <div>
               <Image
-                src="https://images.unsplash.com/photo-1788508493167-eee9f14161e1?auto=format&fit=crop&w=1400&q=84"
-                alt="Stone path winding through a green garden"
+                src="https://images.unsplash.com/photo-1787427384212-780f42e4f610?auto=format&fit=crop&w=1400&q=84"
+                alt="Stone pergola and shaded garden path with integrated seating"
                 fill
                 sizes="(max-width: 700px) 100vw, 50vw"
               />

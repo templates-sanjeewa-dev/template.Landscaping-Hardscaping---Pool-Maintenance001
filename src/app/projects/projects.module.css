@@ -930,3 +930,114 @@
     transition: none !important;
   }
 }
+
+
+/* Rendered screenshot refinement — final Projects curation pass. */
+.filters button {
+  font-size: .76rem;
+}
+
+.filters > span {
+  color: #5f6b62;
+  font-size: .72rem;
+}
+
+.featureMain img {
+  object-position: center 50%;
+}
+
+.featureDetails > div:first-child img {
+  object-position: center 52%;
+}
+
+.featureDetails > div:last-child img {
+  object-position: center 48%;
+}
+
+.detailStrip figcaption {
+  color: #566258;
+  font-size: .72rem;
+}
+
+.composition {
+  padding-block: clamp(4.2rem, 6.2vw, 6.2rem);
+}
+
+.composition > div:first-child {
+  margin-bottom: 2.7rem;
+}
+
+.compositionGrid article {
+  min-height: 245px;
+  padding: 1.8rem 1.9rem;
+}
+
+.compositionGrid h3 {
+  margin-top: 2.65rem;
+  font-size: 1.62rem;
+}
+
+.compositionGrid p {
+  font-size: .92rem;
+  line-height: 1.66;
+}
+
+.services {
+  padding-block: clamp(4rem, 5.8vw, 5.8rem);
+}
+
+.services nav a {
+  padding-block: 1.05rem;
+  font-size: 1.48rem;
+}
+
+@media (max-width: 900px) {
+  .composition,
+  .services {
+    padding-block: 4.7rem;
+  }
+
+  .compositionGrid article {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .filters button {
+    font-size: .74rem;
+  }
+
+  .filters > span {
+    font-size: .7rem;
+  }
+
+  .detailStrip figcaption {
+    font-size: .68rem;
+  }
+
+  .composition,
+  .services {
+    padding-block: 4.2rem;
+  }
+
+  .composition > div:first-child {
+    margin-bottom: 2.25rem;
+  }
+
+  .compositionGrid article {
+    padding: 1.55rem;
+  }
+
+  .compositionGrid h3 {
+    margin-top: 1.9rem;
+    font-size: 1.48rem;
+  }
+
+  .compositionGrid p {
+    font-size: .9rem;
+  }
+
+  .services nav a {
+    padding-block: 1rem;
+  }
+}
