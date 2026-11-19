@@ -118,7 +118,7 @@ export default function ServicesPage() {
               clear direction.
             </p>
             <div className={styles.heroActions}>
-              <a className={styles.primaryButton} href="#estimate">Request a free estimate <span aria-hidden="true">↗</span></a>
+              <a className={styles.primaryButton} href="/contact">Request a free estimate <span aria-hidden="true">↗</span></a>
               <a className={styles.textLink} href="#service-index">Explore services <span aria-hidden="true">↓</span></a>
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function ServicesPage() {
                 <ul>
                   {service.items.map((item) => <li key={item}>{item}</li>)}
                 </ul>
-                <a className={styles.inlineCta} href="#estimate">Discuss this service <span aria-hidden="true">↗</span></a>
+                <a className={styles.inlineCta} href="/contact">Discuss this service <span aria-hidden="true">↗</span></a>
               </div>
             </article>
           ))}
@@ -246,7 +246,7 @@ export default function ServicesPage() {
             <h2 id="services-estimate-title">Tell us about the property. We will help define the right next step.</h2>
             <p>You do not need to diagnose the project before reaching out. Share the space, priorities, and what you want to improve.</p>
             <div>
-              <a className={styles.lightButton} href={`mailto:${site.email}?subject=Terrain service estimate request`}>Request a free estimate <span aria-hidden="true">↗</span></a>
+              <a className={styles.lightButton} href="/contact">Request a free estimate <span aria-hidden="true">↗</span></a>
               <a href={`tel:${site.phone.replace(/[^+\d]/g,"")}`}>{site.phone}</a>
             </div>
             <small>Demo CTA only — no form or CRM is connected in this frontend phase.</small>
