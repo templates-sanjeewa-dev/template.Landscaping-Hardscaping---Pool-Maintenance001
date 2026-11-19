@@ -197,7 +197,7 @@ export default function ProjectsPage() {
               you want to create. We&apos;ll help define the right next step.
             </p>
             <div>
-              <a className={styles.lightButton} href={`mailto:${site.email}?subject=Terrain project estimate request`}>
+              <a className={styles.lightButton} href="/contact">
                 Request a free estimate <span aria-hidden="true">↗</span>
               </a>
               <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>{site.phone}</a>
