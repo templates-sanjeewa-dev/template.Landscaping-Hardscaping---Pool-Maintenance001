@@ -17,7 +17,7 @@ export default function Home() {
           src={heroImage}
           alt="Modern home with a landscaped lawn, patio, and swimming pool"
           fill
-          priority
+          preload
           sizes="100vw"
         />
         <div className={styles.heroShade} aria-hidden="true" />
