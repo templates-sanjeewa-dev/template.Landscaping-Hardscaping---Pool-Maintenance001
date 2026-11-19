@@ -29,8 +29,8 @@ const serviceDetails = [
       "Ongoing landscape care",
     ],
     image:
-      "https://images.unsplash.com/photo-1788508493167-eee9f14161e1?auto=format&fit=crop&w=1800&q=84",
-    alt: "Stone path winding through a carefully planted green garden",
+      "https://images.unsplash.com/photo-1793087404058-9be26ac4aab0?auto=format&fit=crop&w=1800&q=84",
+    alt: "Stone path leading through a bright designed garden to a modern building",
   },
   {
     number: "02",
@@ -48,8 +48,8 @@ const serviceDetails = [
       "Pool surrounds",
     ],
     image:
-      "https://images.unsplash.com/photo-1793132678091-6390620ad08d?auto=format&fit=crop&w=1800&q=84",
-    alt: "Modern stone patio with a long bench beneath a cantilevered roof",
+      "https://images.unsplash.com/photo-1761637822930-fb1c1a3df94d?auto=format&fit=crop&w=1800&q=84",
+    alt: "Modern garden path with paving, stone walls, and clipped hedges",
   },
   {
     number: "03",
@@ -67,8 +67,8 @@ const serviceDetails = [
       "Service notes & recommendations",
     ],
     image:
-      "https://images.unsplash.com/photo-1782203601034-d4ee0fadb7e1?auto=format&fit=crop&w=1800&q=84",
-    alt: "Luxury outdoor swimming pool area with lounge seating",
+      "https://images.unsplash.com/photo-1762811054950-b74e0a055c80?auto=format&fit=crop&w=1800&q=84",
+    alt: "Modern residential pool with outdoor seating and landscaped surroundings",
   },
   {
     number: "04",
@@ -125,8 +125,8 @@ export default function ServicesPage() {
 
           <div className={styles.heroMedia}>
             <Image
-              src="https://images.unsplash.com/photo-1763222208594-58426d30d3c4?auto=format&fit=crop&w=2000&q=86"
-              alt="Stone home with a manicured residential landscape and garden path"
+              src="https://images.unsplash.com/photo-1793891465680-030c378bb456?auto=format&fit=crop&w=2000&q=86"
+              alt="Modern stone home with a swimming pool and refined outdoor landscaping"
               fill
               preload
               sizes="(max-width: 900px) 100vw, 48vw"
@@ -253,8 +253,8 @@ export default function ServicesPage() {
           </div>
           <div className={styles.estimateMedia}>
             <Image
-              src="https://images.unsplash.com/photo-1768761442110-7fc2e9c9ecda?auto=format&fit=crop&w=1800&q=84"
-              alt="Stone manor house framed by a manicured garden and pathway"
+              src="https://images.unsplash.com/photo-1778694276931-056406c4f4d9?auto=format&fit=crop&w=1800&q=84"
+              alt="Contemporary home with a natural pool and lush surrounding landscape"
               fill
               sizes="(max-width: 900px) 100vw, 46vw"
             />
