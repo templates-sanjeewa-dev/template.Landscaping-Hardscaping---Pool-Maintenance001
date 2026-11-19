@@ -103,8 +103,8 @@ export default function AboutPage() {
 
           <div className={styles.heroMedia}>
             <Image
-              src="https://images.unsplash.com/photo-1759496607068-f2892afdaf23?auto=format&fit=crop&w=1800&q=86"
-              alt="Landscape professional working in a lush residential garden"
+              src="https://images.unsplash.com/photo-1774579893308-ec777199ce32?auto=format&fit=crop&w=1800&q=86"
+              alt="Landscape crew trimming and shaping garden planting outdoors"
               fill
               preload
               sizes="(max-width: 900px) 100vw, 48vw"
@@ -186,8 +186,8 @@ export default function AboutPage() {
         <section className={styles.integrated} aria-labelledby="integrated-title" data-reveal>
           <div className={styles.integratedMedia}>
             <Image
-              src="https://images.unsplash.com/photo-1776186243408-3c0489503faa?auto=format&fit=crop&w=1800&q=86"
-              alt="Modern landscaped patio with outdoor seating and layered greenery"
+              src="https://images.unsplash.com/photo-1793132678091-6390620ad08d?auto=format&fit=crop&w=1800&q=86"
+              alt="Modern stone patio with integrated garden planting and seating"
               fill
               sizes="(max-width: 900px) 100vw, 52vw"
             />
@@ -235,15 +235,15 @@ export default function AboutPage() {
             <p className={styles.kicker}>Austin + surrounding communities</p>
             <h2 id="texas-title">Centered on Austin. Shaped around the property.</h2>
             <p>
-              For this portfolio presentation, Terrain is centered on Austin and nearby
-              communities. The approach begins with the property itself—its architecture,
-              grade, existing materials, planting, and the way the outdoor space is used.
+              Terrain is centered on Austin and nearby communities, with an approach that
+              begins with the property itself—its architecture, grade, existing materials,
+              planting, and the way the outdoor space is used.
             </p>
           </div>
           <div className={styles.texasMedia}>
             <Image
-              src="https://images.unsplash.com/photo-1766603636774-5f328e0da870?auto=format&fit=crop&w=1600&q=84"
-              alt="Modern residential entrance with stone wall and layered garden planting"
+              src="https://images.unsplash.com/photo-1786348521420-e9045e5d9263?auto=format&fit=crop&w=1600&q=84"
+              alt="Residential backyard with stone path, lawn, garden seating, and greenery"
               fill
               sizes="(max-width: 900px) 100vw, 45vw"
             />
@@ -281,8 +281,8 @@ export default function AboutPage() {
           </div>
           <div className={styles.estimateMedia}>
             <Image
-              src="https://images.unsplash.com/photo-1788954774468-07a2eea12081?auto=format&fit=crop&w=1800&q=84"
-              alt="Winding stone path through a lush garden with ornamental grasses"
+              src="https://images.unsplash.com/photo-1775743239793-5480f44d6e56?auto=format&fit=crop&w=1800&q=84"
+              alt="Stone pathway lined with manicured hedges and mature garden planting"
               fill
               sizes="(max-width: 900px) 100vw, 46vw"
             />

@@ -916,3 +916,102 @@
     font-size: .66rem;
   }
 }
+
+
+/* Rendered screenshot refinement — final About curation pass. */
+.heroMedia img {
+  object-position: center 44%;
+}
+
+.fieldGrid figure:nth-child(2) img {
+  object-position: center 52%;
+  filter: saturate(.88) brightness(.96);
+}
+
+.valuesGrid h3 {
+  font-size: 1.62rem;
+}
+
+.valuesGrid p {
+  color: #566258;
+  font-size: .92rem;
+}
+
+.qualityGrid article {
+  padding-block: 1.22rem;
+}
+
+.qualityGrid h3 {
+  font-size: 1.52rem;
+}
+
+.qualityGrid p {
+  color: #566258;
+  font-size: .93rem;
+}
+
+.integratedMedia img {
+  object-position: center 50%;
+}
+
+.relationship {
+  padding-block: clamp(4.1rem, 5.8vw, 5.8rem);
+}
+
+.relationship li {
+  padding-block: 1.3rem;
+}
+
+.texasMedia img {
+  object-position: center 54%;
+}
+
+.services {
+  padding-block: clamp(4rem, 5.5vw, 5.5rem);
+}
+
+.services nav a {
+  font-size: 1.52rem;
+}
+
+.estimateMedia img {
+  object-position: center 54%;
+}
+
+@media (max-width: 900px) {
+  .relationship,
+  .services {
+    padding-block: 4.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .valuesGrid h3 {
+    font-size: 1.46rem;
+  }
+
+  .valuesGrid p,
+  .qualityGrid p {
+    font-size: .9rem;
+  }
+
+  .qualityGrid article,
+  .relationship li {
+    padding-block: 1.2rem;
+  }
+
+  .relationship,
+  .services {
+    padding-block: 4rem;
+  }
+
+  .services nav a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fieldGrid figure:nth-child(2) img {
+    filter: saturate(.88) brightness(.96);
+  }
+}
