@@ -49,12 +49,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.trustStrip} aria-label="Core capabilities" data-reveal>
+      <section className={styles.trustStrip} aria-label="How we work" data-reveal>
         {[
-          ["01", "Landscape", "Designed around the property"],
-          ["02", "Hardscape", "Built for everyday use"],
-          ["03", "Pool Care", "Consistent, detail-led service"],
-          ["04", "Outdoor Living", "Made for gathering"],
+          ["01", "Design", "A plan shaped around the property"],
+          ["02", "Build", "Crafted with durable materials"],
+          ["03", "Maintain", "Ongoing landscape and pool care"],
+          ["04", "One Team", "One standard from start to finish"],
         ].map(([number, title, copy]) => (
           <div key={title}>
             <span>{number}</span>
