@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { navigation, site } from "@/data/site";
 import styles from "@/app/page.module.css";
 
-export function SiteHeader() {
+export function SiteHeader({ interior = false }: { interior?: boolean }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -65,10 +65,10 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`${styles.header} ${scrolled ? styles.headerScrolled : ""} ${open ? styles.headerMenuOpen : ""}`}
+      className={`${styles.header} ${scrolled ? styles.headerScrolled : ""} ${interior ? styles.headerInterior : ""} ${open ? styles.headerMenuOpen : ""}`}
     >
       <div className={styles.headerInner}>
-        <a className={styles.brand} href="#top" aria-label={`${site.brand.name} home`}>
+        <a className={styles.brand} href="/" aria-label={`${site.brand.name} home`}>
           <span className={styles.brandMark} aria-hidden="true">
             <span />
             <span />

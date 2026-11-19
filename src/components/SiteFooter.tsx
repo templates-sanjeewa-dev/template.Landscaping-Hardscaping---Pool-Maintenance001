@@ -6,7 +6,7 @@ export function SiteFooter() {
     <footer className={styles.footer}>
       <div className={styles.footerTop}>
         <div className={styles.footerBrand}>
-          <a aria-label={`${site.brand.name} home`} className={styles.footerLogo} href="#top">
+          <a aria-label={`${site.brand.name} home`} className={styles.footerLogo} href="/">
             <span className={styles.footerMark} aria-hidden="true"><i /><i /><i /></span>
             <span>
               <strong>{site.brand.name}</strong>
@@ -27,7 +27,7 @@ export function SiteFooter() {
           <div>
             <h3>Services</h3>
             {services.map((service) => (
-              <a href="#services" key={service.title}>{service.title}</a>
+              <a href="/services" key={service.title}>{service.title}</a>
             ))}
           </div>
           <div>

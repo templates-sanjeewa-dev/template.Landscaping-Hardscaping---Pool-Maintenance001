@@ -2680,3 +2680,59 @@
     height: 8px;
   }
 }
+
+
+/* Shared interior-page header state. */
+.headerInterior {
+  color: var(--ink);
+  background: rgba(250, 248, 242, .97);
+  box-shadow: 0 10px 36px rgba(17, 32, 21, .055);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.headerInterior .headerInner {
+  height: 78px;
+  border-bottom-color: rgba(23, 32, 24, .14);
+}
+
+.headerInterior .headerCta {
+  border-color: var(--forest);
+  color: var(--paper-bright);
+  background: var(--forest);
+}
+
+.headerInterior .headerCta:hover,
+.headerInterior .headerCta:focus-visible {
+  border-color: var(--forest-2);
+  color: var(--paper-bright);
+  background: var(--forest-2);
+}
+
+.headerInterior.headerMenuOpen {
+  color: var(--white);
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.headerInterior.headerMenuOpen .headerInner {
+  border-bottom-color: rgba(255,255,255,.16);
+}
+
+@media (max-width: 1180px) {
+  .headerInterior .menuButton {
+    color: var(--ink);
+  }
+
+  .headerInterior.headerMenuOpen .menuButton {
+    color: var(--white);
+  }
+}
+
+@media (max-width: 640px) {
+  .headerInterior .headerInner {
+    height: 68px;
+  }
+}
