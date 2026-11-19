@@ -2736,3 +2736,23 @@
     height: 68px;
   }
 }
+
+
+/* Services-page navigation acceptance fixes. */
+.header.headerInterior:not(.headerMenuOpen) {
+  color: var(--ink);
+  background: rgba(250, 248, 242, .97);
+}
+
+.desktopNav a[aria-current="page"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.mobileMenu nav a[aria-current="page"] {
+  color: var(--white);
+}
+
+.mobileMenu nav a[aria-current="page"] span {
+  color: #b8a37e;
+}
