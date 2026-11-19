@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState, type FormEvent } from "react";
 import styles from "@/app/contact/contact.module.css";
 
 const interests = [
