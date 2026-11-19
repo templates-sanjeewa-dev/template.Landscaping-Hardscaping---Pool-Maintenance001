@@ -123,7 +123,7 @@ export default function Home() {
 
       <section className={styles.why} aria-labelledby="why-title" data-reveal>
         <div className={styles.whyHeading}>
-          <p className={styles.kicker}>Why Verdant & Stone</p>
+          <p className={styles.kicker}>Why Terrain</p>
           <h2 id="why-title">Good outdoor work should feel considered long after installation day.</h2>
         </div>
         <div className={styles.whyGrid}>
