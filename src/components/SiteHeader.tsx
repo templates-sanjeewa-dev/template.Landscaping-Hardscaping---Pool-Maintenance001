@@ -72,6 +72,7 @@ export function SiteHeader() {
           <span className={styles.brandMark} aria-hidden="true">
             <span />
             <span />
+            <span />
           </span>
           <span className={styles.brandText}>
             <strong>{site.brand.name}</strong>

@@ -2515,3 +2515,69 @@
     transition: none;
   }
 }
+
+
+/* Terrain brand mark + hero frame refinement. */
+.heroGrid {
+  border-left: 0;
+  border-right: 0;
+}
+
+.header:not(.headerScrolled):not(.headerMenuOpen) .headerInner {
+  border-bottom-color: rgba(255, 255, 255, .16);
+}
+
+.heroFoot {
+  border-top-color: rgba(255, 255, 255, .16);
+}
+
+.brandMark,
+.footerMark {
+  overflow: hidden;
+}
+
+.brandMark span,
+.footerMark i {
+  left: 50%;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-top: 1.25px solid currentColor;
+  border-radius: 50%;
+  transform: translateX(-50%) rotate(-9deg);
+}
+
+.brandMark span:nth-child(1),
+.footerMark i:nth-child(1) {
+  top: 11px;
+  width: 18px;
+  height: 8px;
+}
+
+.brandMark span:nth-child(2),
+.footerMark i:nth-child(2) {
+  top: 17px;
+  width: 24px;
+  height: 10px;
+}
+
+.brandMark span:nth-child(3),
+.footerMark i:nth-child(3) {
+  top: 24px;
+  width: 17px;
+  height: 7px;
+}
+
+@media (max-width: 640px) {
+  .brandMark span:nth-child(1) {
+    top: 9px;
+  }
+
+  .brandMark span:nth-child(2) {
+    top: 15px;
+  }
+
+  .brandMark span:nth-child(3) {
+    top: 21px;
+  }
+}

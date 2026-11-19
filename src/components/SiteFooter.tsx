@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className={styles.footerTop}>
         <div className={styles.footerBrand}>
           <a aria-label={`${site.brand.name} home`} className={styles.footerLogo} href="#top">
-            <span className={styles.footerMark} aria-hidden="true"><i /><i /></span>
+            <span className={styles.footerMark} aria-hidden="true"><i /><i /><i /></span>
             <span>
               <strong>{site.brand.name}</strong>
               <small>{site.brand.descriptor}</small>
