@@ -95,7 +95,7 @@ export default function AboutPage() {
               <a className={styles.primaryButton} href="#philosophy">
                 Our approach <span aria-hidden="true">↓</span>
               </a>
-              <a className={styles.textLink} href="#estimate">
+              <a className={styles.textLink} href="/contact">
                 Start a conversation <span aria-hidden="true">↗</span>
               </a>
             </div>
@@ -272,7 +272,7 @@ export default function AboutPage() {
               need to know which service or scope is right before reaching out.
             </p>
             <div>
-              <a className={styles.lightButton} href={`mailto:${site.email}?subject=Terrain project conversation`}>
+              <a className={styles.lightButton} href="/contact">
                 Request a free estimate <span aria-hidden="true">↗</span>
               </a>
               <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>{site.phone}</a>
