@@ -1449,3 +1449,297 @@
     transform: translate(3px, -3px);
   }
 }
+
+
+/* Chat 2 — premium interaction, responsive, and accessibility polish. */
+:global(section[id]) {
+  scroll-margin-top: 92px;
+}
+
+.header {
+  position: fixed;
+  transition:
+    color 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease,
+    backdrop-filter 220ms ease;
+}
+
+.headerInner {
+  transition:
+    height 220ms cubic-bezier(.2,.7,.2,1),
+    border-color 220ms ease;
+}
+
+.headerScrolled {
+  color: var(--ink);
+  background: rgba(250, 248, 242, 0.92);
+  box-shadow: 0 10px 36px rgba(17, 32, 21, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.headerScrolled .headerInner {
+  height: 76px;
+  border-color: rgba(23, 32, 24, 0.14);
+}
+
+.headerScrolled .headerCta {
+  border-color: var(--forest);
+  color: var(--paper-bright);
+  background: var(--forest);
+}
+
+.headerScrolled .headerCta:hover,
+.headerScrolled .headerCta:focus-visible {
+  border-color: var(--forest-2);
+  color: var(--paper-bright);
+  background: var(--forest-2);
+}
+
+.headerMenuOpen {
+  color: var(--white);
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.headerMenuOpen .headerInner {
+  height: 82px;
+  border-color: rgba(255,255,255,.16);
+}
+
+.headerMenuOpen .headerCta {
+  color: var(--white);
+  background: transparent;
+  border-color: rgba(255,255,255,.66);
+}
+
+.heroContent > .eyebrow,
+.hero h1,
+.heroLead,
+.heroActions {
+  animation: heroArrive 760ms cubic-bezier(.2,.72,.2,1) both;
+}
+
+.hero h1 { animation-delay: 70ms; }
+.heroLead { animation-delay: 145ms; }
+.heroActions { animation-delay: 220ms; }
+
+@keyframes heroArrive {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+:global(html[data-motion="ready"]) [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 720ms cubic-bezier(.2,.7,.2,1),
+    transform 720ms cubic-bezier(.2,.7,.2,1);
+}
+
+:global(html[data-motion="ready"]) [data-reveal][data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+.primaryButton,
+.lightButton,
+.mobileEstimate {
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.primaryButton:hover,
+.primaryButton:focus-visible,
+.lightButton:hover,
+.lightButton:focus-visible,
+.mobileEstimate:hover,
+.mobileEstimate:focus-visible {
+  transform: translateY(-2px);
+}
+
+.primaryButton:hover,
+.primaryButton:focus-visible {
+  background: #fffdf7;
+}
+
+.lightButton:hover,
+.lightButton:focus-visible {
+  background: var(--white);
+}
+
+.trustStrip > div {
+  transition: background 220ms ease;
+}
+
+.trustStrip > div:hover {
+  background: rgba(255,255,255,.32);
+}
+
+.serviceCard,
+.testimonialGrid blockquote {
+  transition:
+    background 260ms ease,
+    box-shadow 260ms ease,
+    transform 260ms cubic-bezier(.2,.7,.2,1);
+}
+
+.serviceCard:hover {
+  z-index: 1;
+  background: #fffdf8;
+  box-shadow: 0 20px 50px rgba(25, 40, 28, 0.08);
+}
+
+.serviceBody a {
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.serviceBody a:hover,
+.serviceBody a:focus-visible {
+  color: #435245;
+  border-color: rgba(23,32,24,.34);
+}
+
+.projectImage::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 60%, rgba(12, 24, 16, 0.14));
+  opacity: 0;
+  transition: opacity 360ms ease;
+}
+
+.projectLarge:hover .projectImage::after,
+.projectCard:hover .projectImage::after {
+  opacity: 1;
+}
+
+.projectMeta h3 {
+  transition: color 180ms ease;
+}
+
+.projectLarge:hover .projectMeta h3,
+.projectCard:hover .projectMeta h3 {
+  color: #48574a;
+}
+
+.testimonialGrid blockquote:hover {
+  background: #fffdf8;
+}
+
+.areaList span {
+  transition:
+    padding-left 220ms ease,
+    color 220ms ease,
+    background 220ms ease;
+}
+
+.areaList span:hover {
+  padding-left: .5rem;
+  color: #435245;
+  background: rgba(255,255,255,.24);
+}
+
+.footerDirectory a {
+  transition: color 170ms ease, transform 170ms ease;
+}
+
+.footerDirectory a:hover,
+.footerDirectory a:focus-visible {
+  color: var(--white);
+  transform: translateX(3px);
+}
+
+.mobileContact a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: .2rem;
+}
+
+@media (max-width: 1180px) {
+  .headerScrolled .menuButton {
+    color: var(--ink);
+  }
+
+  .headerMenuOpen .menuButton {
+    color: var(--white);
+  }
+
+  .mobileMenu {
+    height: 100dvh;
+    overflow-y: auto;
+  }
+
+  .mobileMenuInner {
+    min-height: 100dvh;
+  }
+}
+
+@media (max-width: 640px) {
+  :global(section[id]) {
+    scroll-margin-top: 78px;
+  }
+
+  .headerScrolled .headerInner {
+    height: 68px;
+  }
+
+  .headerMenuOpen .headerInner {
+    height: 72px;
+  }
+
+  .mobileMenuInner {
+    width: calc(100% - 32px);
+    padding-top: 108px;
+  }
+
+  .mobileMenuInner > p {
+    font-size: 1.16rem;
+  }
+
+  .serviceCard:hover {
+    box-shadow: none;
+  }
+
+  .areaList span:hover {
+    padding-left: 0;
+    background: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroContent > .eyebrow,
+  .hero h1,
+  .heroLead,
+  .heroActions {
+    animation: none;
+  }
+
+  :global(html[data-motion="ready"]) [data-reveal],
+  :global(html[data-motion="ready"]) [data-reveal][data-visible="true"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .primaryButton:hover,
+  .primaryButton:focus-visible,
+  .lightButton:hover,
+  .lightButton:focus-visible,
+  .mobileEstimate:hover,
+  .mobileEstimate:focus-visible,
+  .footerDirectory a:hover,
+  .footerDirectory a:focus-visible {
+    transform: none;
+  }
+}

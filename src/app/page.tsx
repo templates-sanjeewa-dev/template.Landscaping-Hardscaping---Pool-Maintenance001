@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { HomeMotion } from "@/components/HomeMotion";
 import { areas, projects, services, site, testimonials } from "@/data/site";
 import styles from "./page.module.css";
 
@@ -9,6 +10,7 @@ const heroImage = "https://images.unsplash.com/photo-1783125127199-860da9744dcc?
 export default function Home() {
   return (
     <main id="top" className={styles.page}>
+      <HomeMotion />
       <SiteHeader />
 
       <section className={styles.hero} aria-labelledby="hero-title">
@@ -47,7 +49,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.trustStrip} aria-label="Core capabilities">
+      <section className={styles.trustStrip} aria-label="Core capabilities" data-reveal>
         {[
           ["01", "Landscape", "Designed around the property"],
           ["02", "Hardscape", "Built for everyday use"],
@@ -62,7 +64,7 @@ export default function Home() {
         ))}
       </section>
 
-      <section className={styles.services} id="services" aria-labelledby="services-title">
+      <section className={styles.services} id="services" aria-labelledby="services-title" data-reveal>
         <div className={styles.sectionIntro}>
           <p className={styles.kicker}>What we do</p>
           <div>
@@ -84,14 +86,14 @@ export default function Home() {
                 <span>{service.number}</span>
                 <h3>{service.title}</h3>
                 <p>{service.copy}</p>
-                <a href="#estimate">Explore service <b aria-hidden="true">↗</b></a>
+                <a href="#estimate">Discuss this service <b aria-hidden="true">↗</b></a>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className={styles.feature} aria-labelledby="feature-title">
+      <section className={styles.feature} aria-labelledby="feature-title" data-reveal>
         <div className={styles.featureMedia}>
           <Image
             src="https://images.unsplash.com/photo-1721222204525-1118ce3860e1?auto=format&fit=crop&w=1800&q=86"
@@ -113,11 +115,11 @@ export default function Home() {
             <div><dt>Scope</dt><dd>Landscape + hardscape</dd></div>
             <div><dt>Setting</dt><dd>Austin, Texas</dd></div>
           </dl>
-          <a className={styles.darkLink} href="#projects">View project details <span aria-hidden="true">↗</span></a>
+          <a className={styles.darkLink} href="#projects">See selected work <span aria-hidden="true">↓</span></a>
         </div>
       </section>
 
-      <section className={styles.why} aria-labelledby="why-title">
+      <section className={styles.why} aria-labelledby="why-title" data-reveal>
         <div className={styles.whyHeading}>
           <p className={styles.kicker}>Why Verdant & Stone</p>
           <h2 id="why-title">Good outdoor work should feel considered long after installation day.</h2>
@@ -138,7 +140,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.projects} id="projects" aria-labelledby="projects-title">
+      <section className={styles.projects} id="projects" aria-labelledby="projects-title" data-reveal>
         <div className={styles.projectsHeader}>
           <div>
             <p className={styles.kicker}>Selected work</p>
@@ -169,7 +171,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.process} id="process" aria-labelledby="process-title">
+      <section className={styles.process} id="process" aria-labelledby="process-title" data-reveal>
         <div className={styles.processIntro}>
           <p className={styles.kicker}>Our process</p>
           <h2 id="process-title">Clear from first walk-through to final handoff.</h2>
@@ -196,7 +198,7 @@ export default function Home() {
         </ol>
       </section>
 
-      <section className={styles.about} id="about" aria-labelledby="about-title">
+      <section className={styles.about} id="about" aria-labelledby="about-title" data-reveal>
         <div className={styles.aboutCopy}>
           <p className={styles.kicker}>A local outdoor company</p>
           <h2 id="about-title">The landscape should support the life happening around it.</h2>
@@ -222,7 +224,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.testimonials} aria-labelledby="testimonials-title">
+      <section className={styles.testimonials} aria-labelledby="testimonials-title" data-reveal>
         <div className={styles.testimonialHeader}>
           <p className={styles.kicker}>Client perspective</p>
           <h2 id="testimonials-title">The best result is a space that feels easy to own.</h2>
@@ -242,7 +244,7 @@ export default function Home() {
         <p className={styles.sampleNotice}>Sample testimonials for design demonstration only.</p>
       </section>
 
-      <section className={styles.areas} id="areas" aria-labelledby="areas-title">
+      <section className={styles.areas} id="areas" aria-labelledby="areas-title" data-reveal>
         <div>
           <p className={styles.kicker}>Service area</p>
           <h2 id="areas-title">Rooted in Austin.<br />Working across the surrounding communities.</h2>
@@ -254,7 +256,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.estimate} id="estimate" aria-labelledby="estimate-title">
+      <section className={styles.estimate} id="estimate" aria-labelledby="estimate-title" data-reveal>
         <Image
           src="https://images.unsplash.com/photo-1743167548878-6069e48779c1?auto=format&fit=crop&w=2200&q=86"
           alt="Luxury landscaped backyard with pool"
