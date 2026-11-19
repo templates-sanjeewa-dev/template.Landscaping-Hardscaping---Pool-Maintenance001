@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { HomeMotion } from "@/components/HomeMotion";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -211,7 +212,7 @@ export default function ServicesPage() {
               </article>
             ))}
           </div>
-          <a className={styles.inlineCta} href="/#projects">View selected projects <span aria-hidden="true">↗</span></a>
+          <Link className={styles.inlineCta} href="/#projects">View selected projects <span aria-hidden="true">↗</span></Link>
         </section>
 
         <section className={styles.process} aria-labelledby="service-process-title" data-reveal>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { navigation, services, site } from "@/data/site";
 import styles from "@/app/page.module.css";
 
@@ -6,13 +7,13 @@ export function SiteFooter() {
     <footer className={styles.footer}>
       <div className={styles.footerTop}>
         <div className={styles.footerBrand}>
-          <a aria-label={`${site.brand.name} home`} className={styles.footerLogo} href="/">
+          <Link aria-label={`${site.brand.name} home`} className={styles.footerLogo} href="/">
             <span className={styles.footerMark} aria-hidden="true"><i /><i /><i /></span>
             <span>
               <strong>{site.brand.name}</strong>
               <small>{site.brand.descriptor}</small>
             </span>
-          </a>
+          </Link>
           <h2>Better spaces outside.<br />Better days at home.</h2>
           <p>
             Landscape design, hardscaping, pool care, and outdoor living brought

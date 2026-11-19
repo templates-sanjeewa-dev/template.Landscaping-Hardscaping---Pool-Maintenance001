@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { navigation, site } from "@/data/site";
 import styles from "@/app/page.module.css";
@@ -69,7 +70,7 @@ export function SiteHeader({ interior = false, activePage }: { interior?: boolea
       className={`${styles.header} ${scrolled ? styles.headerScrolled : ""} ${interior ? styles.headerInterior : ""} ${open ? styles.headerMenuOpen : ""}`}
     >
       <div className={styles.headerInner}>
-        <a className={styles.brand} href="/" aria-label={`${site.brand.name} home`}>
+        <Link className={styles.brand} href="/" aria-label={`${site.brand.name} home`}>
           <span className={styles.brandMark} aria-hidden="true">
             <span />
             <span />
@@ -79,7 +80,7 @@ export function SiteHeader({ interior = false, activePage }: { interior?: boolea
             <strong>{site.brand.name}</strong>
             <small>{site.brand.descriptor}</small>
           </span>
-        </a>
+        </Link>
 
         <nav className={styles.desktopNav} aria-label="Primary navigation">
           {navigation.map((item) => (
