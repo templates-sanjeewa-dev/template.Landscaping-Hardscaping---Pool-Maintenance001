@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";\nimport { usePathname } from "next/navigation";
 import { navigation, site } from "@/data/site";
 import styles from "@/app/page.module.css";
 
 export function SiteHeader({ interior = false }: { interior?: boolean }) {
-  const [open, setOpen] = useState(false);
+  const pathname = usePathname();\n  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -82,7 +82,7 @@ export function SiteHeader({ interior = false }: { interior?: boolean }) {
 
         <nav className={styles.desktopNav} aria-label="Primary navigation">
           {navigation.map((item) => (
-            <a aria-current={interior && item.href === "/services" ? "page" : undefined} href={item.href} key={item.href}>{item.label}</a>
+            <a aria-current={pathname === item.href ? "page" : undefined} href={item.href} key={item.href}>{item.label}</a>
           ))}
         </nav>
 
@@ -126,7 +126,7 @@ export function SiteHeader({ interior = false }: { interior?: boolean }) {
           <p>Outdoor spaces designed, built, and cared for with one consistent standard.</p>
           <nav aria-label="Mobile navigation">
             {navigation.map((item, index) => (
-              <a aria-current={interior && item.href === "/services" ? "page" : undefined} href={item.href} key={item.href} onClick={() => setOpen(false)}>
+              <a aria-current={pathname === item.href ? "page" : undefined} href={item.href} key={item.href} onClick={() => setOpen(false)}>
                 <span>0{index + 1}</span>
                 {item.label}
                 <b aria-hidden="true">↗</b>
