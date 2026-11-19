@@ -233,7 +233,7 @@ export default function ServicesPage() {
           <div>
             <p className={styles.kicker}>Where we work</p>
             <h2 id="service-areas-title">Serving Austin and the communities around it.</h2>
-            <p>For this demonstration brand, the service area is intentionally focused around the greater Austin market.</p>
+            <p>Sample service coverage is centered on Austin and the surrounding communities shown here.</p>
           </div>
           <div className={styles.areaList}>
             {areas.map((area,index) => <span key={area}><small>{String(index+1).padStart(2,"0")}</small>{area}</span>)}
