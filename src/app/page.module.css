@@ -2581,3 +2581,102 @@
     top: 21px;
   }
 }
+
+
+/* Terrain logo v2 — T monogram meeting a single landform line. */
+.brandMark,
+.footerMark {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .025);
+}
+
+.brandMark span,
+.footerMark i {
+  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  transform: none;
+}
+
+/* T crossbar */
+.brandMark span:nth-child(1),
+.footerMark i:nth-child(1) {
+  top: 10px;
+  left: 9px;
+  width: 24px;
+  height: 1.5px;
+  border: 0;
+  border-radius: 999px;
+  background: currentColor;
+  transform: none;
+}
+
+/* T stem */
+.brandMark span:nth-child(2),
+.footerMark i:nth-child(2) {
+  top: 10px;
+  left: 20px;
+  width: 1.5px;
+  height: 16px;
+  border: 0;
+  border-radius: 999px;
+  background: currentColor;
+  transform: none;
+}
+
+/* Terrain / horizon stroke */
+.brandMark span:nth-child(3),
+.footerMark i:nth-child(3) {
+  top: auto;
+  right: auto;
+  bottom: 8px;
+  left: 8px;
+  width: 26px;
+  height: 10px;
+  border: 0;
+  border-top: 1.5px solid currentColor;
+  border-radius: 52% 48% 0 0;
+  background: transparent;
+  transform: rotate(-7deg);
+  transform-origin: center;
+}
+
+.headerScrolled .brandMark {
+  background: rgba(23, 39, 29, .035);
+}
+
+.footerMark {
+  background: rgba(255, 255, 255, .02);
+}
+
+@media (max-width: 640px) {
+  .brandMark {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+  }
+
+  .brandMark span:nth-child(1) {
+    top: 8px;
+    left: 8px;
+    width: 20px;
+  }
+
+  .brandMark span:nth-child(2) {
+    top: 8px;
+    left: 17px;
+    height: 14px;
+  }
+
+  .brandMark span:nth-child(3) {
+    bottom: 7px;
+    left: 7px;
+    width: 22px;
+    height: 8px;
+  }
+}
