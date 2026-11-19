@@ -233,11 +233,11 @@ export default function AboutPage() {
         <section className={styles.texas} aria-labelledby="texas-title" data-reveal>
           <div className={styles.texasCopy}>
             <p className={styles.kicker}>Austin + surrounding communities</p>
-            <h2 id="texas-title">A local demonstration brand with a property-first point of view.</h2>
+            <h2 id="texas-title">Centered on Austin. Shaped around the property.</h2>
             <p>
-              Terrain is presented as an Austin-area outdoor company for this portfolio
-              concept. The service geography and project names are illustrative, while
-              the design system is built to adapt cleanly to a real landscaping business.
+              For this portfolio presentation, Terrain is centered on Austin and nearby
+              communities. The approach begins with the property itself—its architecture,
+              grade, existing materials, planting, and the way the outdoor space is used.
             </p>
           </div>
           <div className={styles.texasMedia}>

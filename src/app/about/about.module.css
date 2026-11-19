@@ -770,3 +770,149 @@
     transition: none !important;
   }
 }
+
+
+/* About final acceptance polish. */
+.primaryButton,
+.textLink,
+.inlineLink,
+.lightButton,
+.services nav a {
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.primaryButton:hover,
+.primaryButton:focus-visible {
+  background: var(--forest-2);
+}
+
+.textLink:hover,
+.textLink:focus-visible,
+.inlineLink:hover,
+.inlineLink:focus-visible {
+  color: var(--forest-2);
+}
+
+.integratedCopy .inlineLink:hover,
+.integratedCopy .inlineLink:focus-visible {
+  color: var(--white);
+  border-color: rgba(255,255,255,.8);
+}
+
+.fieldGrid figure:nth-child(1) img {
+  object-position: center 48%;
+}
+
+.fieldGrid figure:nth-child(2) img {
+  object-position: center 54%;
+}
+
+.fieldGrid figure:nth-child(3) img {
+  object-position: center 46%;
+}
+
+.valuesGrid article {
+  min-height: 280px;
+}
+
+.valuesGrid h3 {
+  margin-top: 3rem;
+}
+
+.quality,
+.relationship {
+  padding-block: clamp(4.5rem, 6.3vw, 6.3rem);
+}
+
+.qualityGrid h3,
+.relationship h3 {
+  font-size: 1.48rem;
+}
+
+.qualityGrid p,
+.relationship li p {
+  font-size: .92rem;
+}
+
+.texas {
+  min-height: 590px;
+}
+
+.services {
+  padding-block: clamp(4.4rem, 6.2vw, 6.2rem);
+}
+
+.services nav a {
+  padding-block: 1.05rem;
+  font-size: 1.48rem;
+}
+
+@media (max-width: 900px) {
+  .quality,
+  .relationship,
+  .services {
+    padding-block: 4.6rem;
+  }
+
+  .texas {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroCopy {
+    min-height: 520px;
+  }
+
+  .heroMedia {
+    min-height: 430px;
+  }
+
+  .valuesGrid article {
+    min-height: 0;
+  }
+
+  .valuesGrid h3 {
+    margin-top: 1.9rem;
+  }
+
+  .fieldGrid figure > div {
+    min-height: 360px;
+  }
+
+  .quality,
+  .relationship,
+  .services {
+    padding-block: 4.1rem;
+  }
+
+  .qualityGrid h3,
+  .relationship h3 {
+    font-size: 1.32rem;
+  }
+
+  .services nav a {
+    padding-block: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .heroCopy > p:not(.kicker),
+  .philosophyBody p,
+  .valuesGrid p,
+  .qualityGrid p,
+  .relationship li p,
+  .integratedCopy > p:not(.kicker),
+  .texasCopy > p:not(.kicker),
+  .estimateCopy > p:not(.kicker) {
+    font-size: .9rem;
+  }
+
+  .fieldGrid figcaption {
+    font-size: .66rem;
+  }
+}
