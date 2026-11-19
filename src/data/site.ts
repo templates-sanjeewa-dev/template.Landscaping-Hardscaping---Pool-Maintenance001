@@ -1,10 +1,10 @@
 export const site = {
   brand: {
-    name: "Verdant & Stone",
-    descriptor: "Outdoor Environments",
+    name: "Terrain",
+    descriptor: "Outdoor Co.",
   },
   phone: "(512) 555-0184",
-  email: "hello@verdantandstone.example",
+  email: "hello@terrainoutdoor.example",
   location: "Austin, Texas & surrounding communities",
 };
 
