@@ -18,7 +18,7 @@ export function SiteFooter() {
             Landscape design, hardscaping, pool care, and outdoor living brought
             together with a calm process and a high standard of finish.
           </p>
-          <a className={styles.footerContact} href="#estimate">
+          <a className={styles.footerContact} href="/contact">
             Start a project <span aria-hidden="true">↗</span>
           </a>
         </div>
