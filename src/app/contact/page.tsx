@@ -47,7 +47,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className={styles.enquiry} aria-label="Project enquiry" data-reveal>
+        <section className={styles.enquiry} id="enquiry" aria-label="Project enquiry" data-reveal>
           <ContactForm />
 
           <aside className={styles.contactPanel}>

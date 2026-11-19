@@ -129,3 +129,90 @@
 @media (prefers-reduced-motion: reduce) {
   .formFooter button, .services nav a b { transform: none !important; transition: none !important; }
 }
+
+
+/* Contact final acceptance polish. */
+#enquiry {
+  scroll-margin-top: 96px;
+}
+
+.formFooter button span,
+.reassurance a span {
+  transition: transform 180ms ease;
+}
+
+.formFooter button:hover span,
+.formFooter button:focus-visible span,
+.reassurance a:hover span,
+.reassurance a:focus-visible span {
+  transform: translate(3px, -3px);
+}
+
+.contactPanel a,
+.reassurance a {
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.contactPanel a:hover,
+.contactPanel a:focus-visible {
+  color: var(--white);
+}
+
+.reassurance a:hover,
+.reassurance a:focus-visible {
+  border-color: rgba(255,255,255,.82);
+}
+
+.form input:user-invalid,
+.form textarea:user-invalid {
+  border-color: #9a6557;
+}
+
+@media (max-width: 900px) {
+  #enquiry {
+    scroll-margin-top: 84px;
+  }
+
+  .next,
+  .services,
+  .local {
+    padding-block: clamp(4.4rem, 6vw, 5.5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  #enquiry {
+    scroll-margin-top: 74px;
+  }
+
+  .hero {
+    gap: 2rem;
+  }
+
+  .form input,
+  .form select {
+    min-height: 56px;
+  }
+
+  .interests label span {
+    min-height: 44px;
+  }
+
+  .contactPanel dd {
+    font-size: .9rem;
+  }
+
+  .next,
+  .services,
+  .local {
+    padding-block: 4.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .formFooter button span,
+  .reassurance a span {
+    transform: none !important;
+    transition: none !important;
+  }
+}

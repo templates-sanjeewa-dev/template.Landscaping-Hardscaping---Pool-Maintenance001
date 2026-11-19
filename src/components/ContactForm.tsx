@@ -20,7 +20,7 @@ export function ContactForm() {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={styles.form} aria-describedby="contact-demo-note" onSubmit={handleSubmit}>
       <div className={styles.formIntro}>
         <p className={styles.kicker}>Project enquiry</p>
         <h2>Start with what you know.</h2>
@@ -94,10 +94,10 @@ export function ContactForm() {
       </label>
 
       <div className={styles.formFooter}>
-        <button type="submit">
+        <button aria-describedby="contact-demo-note" type="submit">
           Preview enquiry <span aria-hidden="true">↗</span>
         </button>
-        <p>
+        <p id="contact-demo-note">
           Demo form only — information entered here is not transmitted or stored.
         </p>
       </div>
