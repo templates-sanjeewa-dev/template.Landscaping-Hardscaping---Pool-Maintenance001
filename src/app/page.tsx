@@ -96,8 +96,8 @@ export default function Home() {
       <section className={styles.feature} aria-labelledby="feature-title" data-reveal>
         <div className={styles.featureMedia}>
           <Image
-            src="https://images.unsplash.com/photo-1721222204525-1118ce3860e1?auto=format&fit=crop&w=1800&q=86"
-            alt="Landscaped backyard with a stone path and covered patio"
+            src="https://images.unsplash.com/photo-1776186243408-3c0489503faa?auto=format&fit=crop&w=1800&q=86"
+            alt="Modern landscaped patio with outdoor seating and lush greenery"
             fill
             sizes="(max-width: 900px) 100vw, 58vw"
           />
@@ -216,8 +216,8 @@ export default function Home() {
         </div>
         <div className={styles.aboutImage}>
           <Image
-            src="https://images.unsplash.com/photo-1643063231577-959abf98b59c?auto=format&fit=crop&w=1600&q=84"
-            alt="Modern landscaped backyard with lawn and stone walls"
+            src="https://images.unsplash.com/photo-1759496607068-f2892afdaf23?auto=format&fit=crop&w=1600&q=84"
+            alt="Landscape professional working in a lush residential garden"
             fill
             sizes="(max-width: 900px) 100vw, 47vw"
           />
@@ -258,8 +258,8 @@ export default function Home() {
 
       <section className={styles.estimate} id="estimate" aria-labelledby="estimate-title" data-reveal>
         <Image
-          src="https://images.unsplash.com/photo-1743167548878-6069e48779c1?auto=format&fit=crop&w=2200&q=86"
-          alt="Luxury landscaped backyard with pool"
+          src="https://images.unsplash.com/photo-1756671069656-f12acde10ddd?auto=format&fit=crop&w=2200&q=86"
+          alt="Modern pool area framed by planting and outdoor furniture"
           fill
           sizes="100vw"
         />

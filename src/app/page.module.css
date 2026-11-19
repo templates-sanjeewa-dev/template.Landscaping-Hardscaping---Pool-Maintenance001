@@ -2241,3 +2241,121 @@
     font-size: .66rem;
   }
 }
+
+
+/* Finalization Chat 2 — coherent photography and balanced project composition. */
+.featureMedia img {
+  object-position: center 52%;
+}
+
+.aboutImage img {
+  object-position: center 48%;
+}
+
+.estimate > img {
+  object-position: center 54%;
+}
+
+.projectGrid {
+  grid-template-columns: minmax(0, 1.18fr) minmax(300px, .82fr);
+  gap: 3.4rem 1.5rem;
+}
+
+.projectLarge {
+  grid-row: span 2;
+}
+
+.projectLarge .projectImage {
+  min-height: 720px;
+}
+
+.projectGrid > article:nth-child(2) .projectImage,
+.projectGrid > article:nth-child(3) .projectImage {
+  min-height: 320px;
+}
+
+.projectGrid > article:nth-child(4) {
+  grid-column: 1 / -1;
+}
+
+.projectGrid > article:nth-child(4) .projectImage {
+  min-height: 470px;
+}
+
+.projectGrid > article:nth-child(1) .projectImage img {
+  object-position: center 52%;
+}
+
+.projectGrid > article:nth-child(2) .projectImage img {
+  object-position: center 48%;
+}
+
+.projectGrid > article:nth-child(3) .projectImage img {
+  object-position: center 55%;
+}
+
+.projectGrid > article:nth-child(4) .projectImage img {
+  object-position: center 58%;
+}
+
+.projectGrid > article:nth-child(4) .projectMeta {
+  max-width: 100%;
+}
+
+.projectArrow {
+  width: 46px;
+  height: 46px;
+  box-shadow: 0 6px 20px rgba(16, 32, 23, .08);
+}
+
+@media (max-width: 900px) {
+  .projectGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 1.25rem;
+  }
+
+  .projectLarge {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .projectGrid > article:nth-child(4) {
+    grid-column: 1 / -1;
+  }
+
+  .projectLarge .projectImage,
+  .projectGrid > article:nth-child(4) .projectImage {
+    min-height: 560px;
+  }
+
+  .projectGrid > article:nth-child(2) .projectImage,
+  .projectGrid > article:nth-child(3) .projectImage {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+    gap: 2.6rem;
+  }
+
+  .projectLarge,
+  .projectGrid > article:nth-child(4) {
+    grid-column: auto;
+  }
+
+  .projectLarge .projectImage,
+  .projectGrid > article:nth-child(2) .projectImage,
+  .projectGrid > article:nth-child(3) .projectImage,
+  .projectGrid > article:nth-child(4) .projectImage {
+    min-height: 390px;
+  }
+
+  .featureMedia img,
+  .aboutImage img,
+  .estimate > img,
+  .projectGrid .projectImage img {
+    object-position: center;
+  }
+}
