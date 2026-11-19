@@ -89,7 +89,7 @@ export function SiteHeader({ interior = false }: { interior?: boolean }) {
         </nav>
 
         <a className={styles.headerCta} href={pathname === "/contact" ? "#enquiry" : "/contact"}>
-          Free estimate <span aria-hidden="true">↗</span>
+          {pathname === "/contact" ? "Start enquiry" : "Free estimate"} <span aria-hidden="true">{pathname === "/contact" ? "↓" : "↗"}</span>
         </a>
 
         <button
@@ -136,7 +136,7 @@ export function SiteHeader({ interior = false }: { interior?: boolean }) {
             ))}
           </nav>
           <a className={styles.mobileEstimate} href={pathname === "/contact" ? "#enquiry" : "/contact"} onClick={() => setOpen(false)}>
-            Request a free estimate <span aria-hidden="true">↗</span>
+            {pathname === "/contact" ? "Start enquiry" : "Request a free estimate"} <span aria-hidden="true">{pathname === "/contact" ? "↓" : "↗"}</span>
           </a>
           <div className={styles.mobileContact}>
             <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>{site.phone}</a>

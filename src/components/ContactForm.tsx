@@ -95,7 +95,7 @@ export function ContactForm() {
 
       <div className={styles.formFooter}>
         <button aria-describedby="contact-demo-note" type="submit">
-          Preview enquiry <span aria-hidden="true">↗</span>
+          Review enquiry <span aria-hidden="true">↗</span>
         </button>
         <p id="contact-demo-note">
           Demo form only — information entered here is not transmitted or stored.
