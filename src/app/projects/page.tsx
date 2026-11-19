@@ -41,7 +41,7 @@ export default function ProjectsPage() {
     <div className={styles.page} id="top">
       <HomeMotion />
       <a className={styles.skipLink} href="#main-content">Skip to content</a>
-      <SiteHeader interior />
+      <SiteHeader interior activePage="/projects" />
 
       <main id="main-content">
         <section className={styles.hero} aria-labelledby="projects-hero-title">

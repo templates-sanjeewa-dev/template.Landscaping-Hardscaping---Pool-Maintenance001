@@ -103,7 +103,7 @@ export default function ServicesPage() {
     <div className={styles.page} id="top">
       <HomeMotion />
       <a className={styles.skipLink} href="#main-content">Skip to content</a>
-      <SiteHeader interior />
+      <SiteHeader interior activePage="/services" />
 
       <main id="main-content">
         <section className={styles.hero} aria-labelledby="services-hero-title">

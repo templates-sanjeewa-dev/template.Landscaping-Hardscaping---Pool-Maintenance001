@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
 import { navigation, site } from "@/data/site";
 import styles from "@/app/page.module.css";
 
-export function SiteHeader({ interior = false }: { interior?: boolean }) {
-  const pathname = usePathname();
+export function SiteHeader({ interior = false, activePage }: { interior?: boolean; activePage?: string }) {
+  const contactMode = activePage === "/contact";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -84,12 +83,12 @@ export function SiteHeader({ interior = false }: { interior?: boolean }) {
 
         <nav className={styles.desktopNav} aria-label="Primary navigation">
           {navigation.map((item) => (
-            <a aria-current={pathname === item.href ? "page" : undefined} href={item.href} key={item.href}>{item.label}</a>
+            <a aria-current={activePage === item.href ? "page" : undefined} href={item.href} key={item.href}>{item.label}</a>
           ))}
         </nav>
 
-        <a className={styles.headerCta} href={pathname === "/contact" ? "#enquiry" : "/contact"}>
-          {pathname === "/contact" ? "Start enquiry" : "Free estimate"} <span aria-hidden="true">{pathname === "/contact" ? "↓" : "↗"}</span>
+        <a className={styles.headerCta} href={contactMode ? "#enquiry" : "/contact"}>
+          {contactMode ? "Start enquiry" : "Free estimate"} <span aria-hidden="true">{contactMode ? "↓" : "↗"}</span>
         </a>
 
         <button
@@ -128,15 +127,15 @@ export function SiteHeader({ interior = false }: { interior?: boolean }) {
           <p>Outdoor spaces designed, built, and cared for with one consistent standard.</p>
           <nav aria-label="Mobile navigation">
             {navigation.map((item, index) => (
-              <a aria-current={pathname === item.href ? "page" : undefined} href={item.href} key={item.href} onClick={() => setOpen(false)}>
+              <a aria-current={activePage === item.href ? "page" : undefined} href={item.href} key={item.href} onClick={() => setOpen(false)}>
                 <span>0{index + 1}</span>
                 {item.label}
                 <b aria-hidden="true">↗</b>
               </a>
             ))}
           </nav>
-          <a className={styles.mobileEstimate} href={pathname === "/contact" ? "#enquiry" : "/contact"} onClick={() => setOpen(false)}>
-            {pathname === "/contact" ? "Start enquiry" : "Request a free estimate"} <span aria-hidden="true">{pathname === "/contact" ? "↓" : "↗"}</span>
+          <a className={styles.mobileEstimate} href={contactMode ? "#enquiry" : "/contact"} onClick={() => setOpen(false)}>
+            {contactMode ? "Start enquiry" : "Request a free estimate"} <span aria-hidden="true">{contactMode ? "↓" : "↗"}</span>
           </a>
           <div className={styles.mobileContact}>
             <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>{site.phone}</a>

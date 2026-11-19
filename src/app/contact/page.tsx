@@ -24,7 +24,7 @@ export default function ContactPage() {
     <div className={styles.page} id="top">
       <HomeMotion />
       <a className={styles.skipLink} href="#main-content">Skip to content</a>
-      <SiteHeader interior />
+      <SiteHeader interior activePage="/contact" />
 
       <main id="main-content">
         <section className={styles.hero} aria-labelledby="contact-hero-title">
