@@ -47,7 +47,7 @@ export function SiteFooter() {
       </div>
 
       <div className={styles.footerBottom}>
-        <span>© 2026 {site.brand.name}. Demo presentation website.</span>
+        <span>© 2026 {site.brand.name} {site.brand.descriptor}. Demo presentation website.</span>
         <span>Portfolio demonstration · Frontend only</span>
         <span className={styles.demoNote}>Fictional business and sample content for portfolio demonstration.</span>
       </div>
