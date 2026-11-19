@@ -8,7 +8,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Verdant & Stone | Landscape, Hardscape & Pool Care",
+  title: "Terrain Outdoor Co. | Landscape, Hardscape & Pool Care",
   description:
     "Premium demonstration website for a landscape, hardscape, pool maintenance, and outdoor living company.",
 };
