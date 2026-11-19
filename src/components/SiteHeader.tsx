@@ -82,7 +82,7 @@ export function SiteHeader({ interior = false }: { interior?: boolean }) {
 
         <nav className={styles.desktopNav} aria-label="Primary navigation">
           {navigation.map((item) => (
-            <a href={item.href} key={item.href}>{item.label}</a>
+            <a aria-current={interior && item.href === "/services" ? "page" : undefined} href={item.href} key={item.href}>{item.label}</a>
           ))}
         </nav>
 
@@ -126,7 +126,7 @@ export function SiteHeader({ interior = false }: { interior?: boolean }) {
           <p>Outdoor spaces designed, built, and cared for with one consistent standard.</p>
           <nav aria-label="Mobile navigation">
             {navigation.map((item, index) => (
-              <a href={item.href} key={item.href} onClick={() => setOpen(false)}>
+              <a aria-current={interior && item.href === "/services" ? "page" : undefined} href={item.href} key={item.href} onClick={() => setOpen(false)}>
                 <span>0{index + 1}</span>
                 {item.label}
                 <b aria-hidden="true">↗</b>
@@ -137,7 +137,7 @@ export function SiteHeader({ interior = false }: { interior?: boolean }) {
             Request a free estimate <span aria-hidden="true">↗</span>
           </a>
           <div className={styles.mobileContact}>
-            <a href={`tel:${site.phone.replace(/[^+\\d]/g, "")}`}>{site.phone}</a>
+            <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>{site.phone}</a>
             <span>{site.location}</span>
           </div>
         </div>
