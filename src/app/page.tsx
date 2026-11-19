@@ -35,7 +35,7 @@ export default function Home() {
             environments that feel natural to the home and easy to live in.
           </p>
           <div className={styles.heroActions}>
-            <a className={styles.primaryButton} href="#estimate">
+            <a className={styles.primaryButton} href="/contact">
               Request a free estimate <span aria-hidden="true">↗</span>
             </a>
             <a className={styles.textButton} href="#projects">
@@ -88,7 +88,7 @@ export default function Home() {
                 <span>{service.number}</span>
                 <h3>{service.title}</h3>
                 <p>{service.copy}</p>
-                <a href="#estimate">Discuss this service <b aria-hidden="true">↗</b></a>
+                <a href="/contact">Discuss this service <b aria-hidden="true">↗</b></a>
               </div>
             </article>
           ))}
@@ -213,7 +213,7 @@ export default function Home() {
             <span>Hardscape + outdoor living</span>
             <span>Recurring pool + landscape care</span>
           </div>
-          <a className={styles.darkLink} href="#estimate">Talk about your space <span aria-hidden="true">↗</span></a>
+          <a className={styles.darkLink} href="/contact">Talk about your space <span aria-hidden="true">↗</span></a>
         </div>
         <div className={styles.aboutImage}>
           <Image
@@ -273,7 +273,7 @@ export default function Home() {
             for the property, scope, and budget.
           </p>
           <div className={styles.estimateActions}>
-            <a className={styles.lightButton} href={`mailto:${site.email}?subject=Free estimate request`}>
+            <a className={styles.lightButton} href="/contact">
               Request a free estimate <span aria-hidden="true">↗</span>
             </a>
             <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>{site.phone}</a>
